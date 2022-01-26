@@ -10,6 +10,11 @@
   <img align="center" alt="Thierry-CSS" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg">
 </div><br>
 
+>You can see the functional app running on Netlify URL:
+>Check out !! https://pokedexanimated.netlify.app/
+
+<br>
+
 ![image](https://user-images.githubusercontent.com/33596726/151251662-583e65f8-3b53-4145-9d12-af62259f9b26.png)
 
 <div align="center"> 
