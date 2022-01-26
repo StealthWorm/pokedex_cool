@@ -11,6 +11,7 @@ export const MainContextProvider = ({ children }) => {
     const [nextUrl, setNextUrl] = useState('');
     const [prevUrl, setPrevUrl] = useState('');
     const [shiny, setShiny] = useState(false);
+    const [classic, setClassic] = useState(true);
     const [pageNumber, setPageNumber] = useState(1);
     const initialUrl = `https://pokeapi.co/api/v2/pokemon`
 
@@ -86,6 +87,8 @@ export const MainContextProvider = ({ children }) => {
                 loading,
                 shiny,
                 setShiny,
+                classic,
+                setClassic,
                 pokemon,
                 setPokemon,
                 pageNumber,

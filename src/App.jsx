@@ -8,9 +8,7 @@ import loadingGif from './assets/gif/loading2.gif';
 import { MainContext } from './contexts/MainContext';
 
 function App() {
-  const { shiny, pokemonData, loading } = useContext(MainContext)
-  // https://pokeapi.co/api/v2/evolution-chain/{id}/
-  // https://pokeapi.co/api/v2/ability/{id or name}/
+  const { pokemonData, loading } = useContext(MainContext)
 
   return (
     <div className="App">
@@ -27,7 +25,7 @@ function App() {
         <div className="grid-container" style={pokemonData.length > 1 ? { gridTemplateColumns: "repeat(auto-fit, minmax(17rem, 1fr))" } : { padding: "0.6rem 0 1rem 0", overflow: "hidden" }}>
           {pokemonData.map((pokemon, i) => {
             return (
-              <Card key={i} pokemon={pokemon} shiny={shiny} />
+              <Card key={i} pokemon={pokemon}/>
             )
           })}
         </div>

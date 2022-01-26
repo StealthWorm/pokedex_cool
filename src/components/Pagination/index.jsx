@@ -9,7 +9,7 @@ function Pagination() {
    return (
       <div className="pagination-container">
          <div className="pagination-box">
-            <button className="pagination-button" disabled={!prevUrl} onClick={prev}>
+            <button className={"pagination-button"} disabled={!prevUrl} onClick={prev}>
                <Arrow />
             </button>
             <p>{pageNumber}</p>

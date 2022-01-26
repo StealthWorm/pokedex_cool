@@ -1,4 +1,5 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useContext } from 'react';
+import { MainContext } from '../../contexts/MainContext';
 import Tilt from 'react-parallax-tilt';
 import './styles.css';
 
@@ -25,14 +26,15 @@ const typeColor = {
    steel: "#5995A2"
 }
 
-function Card({ pokemon, shiny }) {
+function Card({ pokemon }) {
+   const { shiny, classic } = useContext(MainContext);
    const [colorCard, setColorCard] = useState("yellow");
 
    useEffect(() => {
       setColorCard(typeColor[pokemon.types[0].type.name])
    }, [pokemon]);
 
-   function BackGroundGif({ type, shiny }) {
+   function BackGroundGif({ type }) {
       return <img src={require(`../../assets/gif/${type}.gif`)} alt={`${type}`} className="bkgBox" />
    }
 
@@ -45,14 +47,19 @@ function Card({ pokemon, shiny }) {
                boxShadow: "rgb(255, 255, 255) 0px -1px 4px, rgb(248, 248, 35) 0px -2px 10px, rgb(235, 238, 64) 0px -2px 15px"
             }
          }>
-            <BackGroundGif type={pokemon.types[0].type.name} shiny={shiny} />
+            <BackGroundGif type={pokemon.types[0].type.name} />
 
             <div className="card" style={{ background: `radial-gradient(circle at 50% 0%, ${colorCard} 36%, #2020208c 38%, transparent 50%, black 95%)` }}>
                <p className="hp">
                   <span>HP</span>
                   {pokemon.stats[0].base_stat}
                </p>
-               <img src={shiny ? pokemon.sprites.front_shiny : pokemon.sprites.front_default} alt="img" className="card-pokemon-img" />
+
+               {classic
+                  ? <img src={shiny ? pokemon.sprites.front_shiny : pokemon.sprites.front_default} alt="img" className="card-pokemon-img" />
+                  : <img src={shiny ? pokemon.sprites.other.home.front_shiny : pokemon.sprites.other.home.front_default} alt="img" className="card-pokemon-img" />
+               }
+
                <h2 className="name">{pokemon.name}</h2>
                <div className="types">
                   {pokemon.types.map((type, i) => {
@@ -78,7 +85,7 @@ function Card({ pokemon, shiny }) {
                         backgroundSize: "cover",
                         justifyContent: "center",
                         alignItems: "center",
-                     }}/>
+                     }} />
                      <img src={shinyEffect} alt="teste" style={{
                         position: 'absolute',
                         width: '100%',
@@ -88,7 +95,7 @@ function Card({ pokemon, shiny }) {
                         zIndex: 1,
                         filter: 'brightness(2.0) contrast(0.8)',
                         transform: 'translateX(-50%)',
-                     }}/>
+                     }} />
                   </div>
                }
 
