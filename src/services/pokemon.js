@@ -1,4 +1,5 @@
 export async function getAllPokemon(url) {
+   // return fetch(url).then(res => res.json()).then(data => data)
    return new Promise((resolve, reject) => {
       fetch(url)
          .then((res) => res.json())

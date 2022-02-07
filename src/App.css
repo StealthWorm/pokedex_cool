@@ -8,7 +8,7 @@
 }
 
 body {
-  height: 100vh;
+  height: 100%;
   background-image: url("https://images3.alphacoders.com/104/thumb-1920-1046496.png");
   background-size: cover;
   background-repeat: no-repeat;
@@ -22,8 +22,8 @@ body {
   overflow-y: auto;
   justify-content: center;
   align-items: center;
-  padding: 1.5rem 1rem 0 1rem;
-  /* grid-template-columns:  repeat(auto-fit, minmax(17rem, 1fr)); */
+  padding: 1.5rem 1rem 0 1.5rem;
+  grid-template-columns:  repeat(auto-fit, minmax(17rem, 1fr));
  }
 
  .grid-container:hover::-webkit-scrollbar-thumb{
@@ -59,4 +59,14 @@ body {
 ::-webkit-scrollbar-thumb {
   box-shadow: inset 0 0 6px #1E2328;
   border-radius: 8px;
+}
+
+@media screen and (max-width: 600px) {
+  .grid-container {
+    margin-top: -1rem;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem 1rem 0 7rem;
+   }  
 }

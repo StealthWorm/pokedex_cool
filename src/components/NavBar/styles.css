@@ -3,7 +3,6 @@ header {
   border-bottom: 1px solid #fff;
   transition: 0.5s;
   display: flex;
-  flex-direction: row;
 }
 
 header button:hover {
@@ -12,29 +11,19 @@ header button:hover {
 
 .container-nav {
    display: flex;
-   height: 7rem;
-   width: 100%;
    align-items: center;
-   justify-content: space-between;
+   height: 100%;
+   width: 100%;
+   justify-content: space-around;
    background: rgba(51, 51, 51, 0.2);
    backdrop-filter: blur(9px);
  }
 
  .container-nav img {
    height: 5rem;
-   padding: 0 0 0 1rem;
- }
- 
- .nav-content {
-   align-items: center;
-   justify-content: space-around;
-   margin: 0 0 0 10rem;
-   left: 25%;
-   position: fixed;
  }
 
  .nav-input input {
-   display: flex;
    border: 0;
    border-radius: 0 0.8rem 0 0.8rem;
    font-size: 2rem;
@@ -47,15 +36,14 @@ header button:hover {
 }
 
 .options {
-  display: flex-end; 
-  justify-content:space-around;
+  height: 7rem;
+  align-items: center;
 }
 
-.options  button {
-  height: 7rem;
+.options button {
   padding: 1rem;
-  top: 0;
-  right: 0;
+  height: 100%;
+  padding: 1rem;
   border: 0;
   font-size: 1.5rem;
   font-weight: bold;
@@ -64,4 +52,42 @@ header button:hover {
   background-color: transparent;
   transition: 0.5s;
   cursor: pointer;
+}
+
+@media screen and (max-width: 700px) {
+  .nav-content
+  {
+    height: 50%;
+    width: 100%;
+  }
+  .options  button {
+    font-size: 1rem;
+  }
+  .container-nav img {
+    height: 2rem;
+  }
+  .nav-input input {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container-nav {
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+  }
+  .nav-input input {
+    font-size: 1rem;
+  }
+  .container-nav img {
+    visibility: hidden;
+    height: 0;
+  }
+  .options {
+    height: 100%;
+  }
+  .options button {
+    font-size: 1rem;
+  }
 }
