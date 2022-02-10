@@ -23,7 +23,7 @@ body {
   justify-content: center;
   align-items: center;
   padding: 1.5rem 1rem 0 1.5rem;
-  grid-template-columns:  repeat(auto-fit, minmax(17rem, 1fr));
+  /* grid-template-columns:  repeat(auto-fit, minmax(17rem, 1fr)); */
  }
 
  .grid-container:hover::-webkit-scrollbar-thumb{

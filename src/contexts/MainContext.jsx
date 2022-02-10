@@ -28,7 +28,7 @@ export const MainContextProvider = ({ children }) => {
         }
 
         fetchData();
-    }, [pokemon === ""]);
+    }, [pokemon, initialUrl]);
 
     const next = async () => {
         setLoading(true);
