@@ -22,7 +22,7 @@ function App() {
           <h1>Loading...</h1>
         </div>
         :
-        <div className="grid-container" >
+        <div className={pokemonData.length > 1 ? "grid-container" : "grid-container-unique"} >
           {pokemonData.map(pokemon => {
             return (
               <Card key={pokemon.id} pokemon={pokemon} />
