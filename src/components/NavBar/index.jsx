@@ -13,7 +13,7 @@ function NavBar() {
    function handleClick() {
       setClassic(!classic)
 
-      if(classic) {
+      if (classic) {
          setText("CLASSIC STYLE")
       } else {
          setText("GO STYLE")

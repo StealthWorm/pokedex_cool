@@ -1,34 +1,32 @@
 .container {
-   height: 400px;
-   width: 280px;
+   display: flex;
+   flex-direction: column;
+   height: 40rem;
+   max-height: 70rem;
+   width: 25rem;
    justify-content: center;
    align-items: center;
    border-radius: 0.8rem;
    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
    backdrop-filter: blur(8.6px);
 
-   transition: transform 0.8s;
+   cursor: pointer;
+   transition: all 0.3s ease 0s;
    transform-style: preserve-3d;
 }
 
 .bkgBox { 
-   height: 100%;
-   width: 100%;
-   justify-content: center;
-   align-items: center;
-   position: absolute;
-   top:0;
-   left: 0;
-   background-size: cover;
-   overflow: hidden;
+   height: 101%;
+   width: 101%;
+   margin: -1px;
 }
 
 .card {
-   /* position: relative; */
-   height: 100%;
-   transition: 0.5s;
    position: absolute;
-   width: 100%;
+   top: 0;
+   height: 101%;
+   width: 101%;
+   margin: -2px;
 }
 
 .container:active {
@@ -39,7 +37,6 @@
    transform: rotateY(180deg);
    visibility: visible;
    z-index: 1;
-   /* color: #f3f3546c */
 }
 
 .card:hover > .card-pokemon-img {
@@ -101,19 +98,19 @@
 .types {
    display: flex;
    justify-content: space-around;
-   margin: 5rem 0 0 0;
+   margin: 6rem 0 2rem 0;
 }
 
 .types img {
    padding-right: 10px;
-   height: 20px;
+   height: 15px;
 }
 
 .types span {
    display: flex;
    justify-content: center;
    padding: 0.5rem 2rem;
-   width: 50px;
+   width: 100px;
 }
 
 .stats {
@@ -135,10 +132,9 @@
 
 .card-back {
    position: absolute;
-   top: 0;
-   left: 0;
-   height: 100%;
-   width: 100%;
+   padding: 1rem;
+   height: 101%;
+   width: 101%;
    visibility: hidden;
    backdrop-filter: blur(8px);
    justify-content: center;
@@ -167,4 +163,5 @@
 
 .card-info h3 {
    border-left: 1px solid #ffffff2c;
+   padding-left: 2rem;
 }

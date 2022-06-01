@@ -18,14 +18,14 @@ function App() {
       {loading
         ?
         <div className="loading">
-          <img src={loadingGif} alt="Loading..." />
+          <img src={loadingGif} alt="LOADING..." />
           <h1>Loading...</h1>
         </div>
         :
-        <div className="grid-container" style={pokemonData.length > 1 ? { gridTemplateColumns: "repeat(auto-fit, minmax(17rem, 1fr))" } : { padding: "0.6rem 0 1rem 0", overflow: "hidden" }}>
-          {pokemonData.map((pokemon, i) => {
+        <div className="grid-container" >
+          {pokemonData.map(pokemon => {
             return (
-              <Card key={i} pokemon={pokemon}/>
+              <Card key={pokemon.id} pokemon={pokemon} />
             )
           })}
         </div>

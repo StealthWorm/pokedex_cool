@@ -40,16 +40,19 @@ function Card({ pokemon }) {
 
    return (
       <Tilt>
-         <div className="container" style={!shiny
-            ? { border: `10px solid ${colorCard}` }
-            : {
-               border: `10px solid ${colorCard}`,
-               boxShadow: "rgb(255, 255, 255) 0px -1px 4px, rgb(248, 248, 35) 0px -2px 10px, rgb(235, 238, 64) 0px -2px 15px"
-            }
-         }>
+         <div
+            className="container"
+            style={!shiny
+               ? { border: `10px solid ${colorCard}`  }
+               : {
+                  border: `10px solid ${colorCard}`,
+                  boxShadow: "rgb(255, 255, 255) 0px -1px 4px, rgb(248, 248, 35) 0px -2px 10px, rgb(235, 238, 64) 0px -2px 15px"
+               }
+            }>
+
             <BackGroundGif type={pokemon.types[0].type.name} />
 
-            <div className="card" style={{ background: `radial-gradient(circle at 50% 0%, ${colorCard} 36%, #2020208c 38%, transparent 50%, black 95%)` }}>
+            <div className="card" style={{ background: `radial-gradient(circle at 50% 0%, ${colorCard} 36%, #2020208c 38%, transparent 50%, black 95%)`}}>
                <p className="hp">
                   <span>HP</span>
                   {pokemon.stats[0].base_stat}
