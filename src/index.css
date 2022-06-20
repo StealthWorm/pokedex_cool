@@ -6,7 +6,7 @@
 }
 
 body {
-  /* height: 100vh; */
+  height: 100vh;
   background-image: url("https://images3.alphacoders.com/104/thumb-1920-1046496.png");
   background-size: cover;
   background-repeat: no-repeat;
@@ -30,5 +30,24 @@ html {
 @media (max-width: 540px) {
   body {
     font-size: 1rem;
+    height: 100vh;
+  } 
+}
+
+@media (max-width: 450px) {
+  body {
+    height: 120vh;
+  } 
+}
+
+@media (max-width: 400px) {
+  body {
+    height: 120vh;
+  } 
+}
+
+@media (max-width: 320px) {
+  body {
+    height: 120vh;
   } 
 }

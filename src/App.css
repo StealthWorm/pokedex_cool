@@ -22,7 +22,8 @@
   display: flex;
   overflow-y: auto; 
   justify-content: center;
-  margin:   2rem;
+  margin:  0 2rem;
+  padding: 1.5rem;
  }
 
  .grid-container:hover::-webkit-scrollbar-thumb{
